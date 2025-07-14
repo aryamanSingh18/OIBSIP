@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARYAMAN- Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:"#37f42d",secondary:'#8effbf'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+.gradient-text {
+background: linear-gradient(90deg, #2d3df4 0%, #8effbf 100%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+overflow-x: hidden;
+background-color: black;
+color: white;
+}
+.hero-bg {
+background-image: url('https://ik.imagekit.io/9ztk9ctyu/pg2.webp?updatedAt=1752161942720');
+background-size: cover;
+background-position: center;
+}
+.hero-overlay {
+backdrop-filter: blur(4px);
+background-color: rgba(0, 0, 0, 0.6);
+}
+.extra{
+    
+}
+.fade-in {
+opacity: 0;
+animation: fadeIn 2s forwards;
+}
+.fade-in-delay-1 {
+opacity: 0;
+animation: fadeIn 2s forwards 0.5s;
+}
+.fade-in-delay-2 {
+opacity: 0;
+animation: fadeIn 2s forwards 1s;
+}
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background: linear-gradient(90deg, #37f42d 0%, #8effbf 100%);
+transition: width 0.3s;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.nav-link:hover {
+background: linear-gradient(90deg, #37f42d 0%, #8effbf 100%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+.gradient-header {
+background: linear-gradient(90deg, #37f42d 0%, #8effbf 100%);
+}
+.slide-in-left {
+animation: slideInLeft 1.5s ease forwards;
+opacity: 0;
+transform: translateX(-50px);
+}
+.slide-in-right {
+animation: slideInRight 1.5s ease forwards;
+opacity: 0;
+transform: translateX(50px);
+}
+.slide-in-up {
+animation: slideInUp 1.5s ease forwards;
+opacity: 0;
+transform: translateY(50px);
+}
+@keyframes slideInLeft {
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes slideInRight {
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes slideInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.hero-button {
+transition: all 0.3s ease;
+transform: translateY(0);
+}
+.hero-button:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(157, 78, 221, 0.3);
+}
+</style>
+</head>
+<body class="bg-black min-h-screen">
+<!-- Header -->
+<header class="fixed w-full bg-black bg-opacity-70 backdrop-blur-sm z-50">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="#" class="flex items-center gap-2">
+<div class="w-10 h-10 flex items-center justify-center">
+<img src="/Users/aryamansinghchouhan/Downloads/WhatsApp Image 2025-07-07 at 18.26.17 (1).jpeg" alt="profile" class="w-full h-full object-contain">
+</div>
+<span class="gradient-text text-2xl font-semibold">Aryaman Singh Chouhan</span>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="nav-link text-white hover:text-primary transition-colors">Home</a>
+<a class="nav-link text-white hover:text-primary transition-colors">Education</a>
+<a class="nav-link text-white hover:text-primary transition-colors">Skills</a>
+<a class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+</nav>
+<div class="md:hidden w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line text-white text-2xl"></i>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg min-h-screen flex items-center justify-center relative">
+<div class="hero-overlay absolute inset-0 z-0"></div>
+<div class="container mx-auto px-6 py-24 relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+<!-- Logo -->
+<div class="w-72 h-72 flex items-center justify-center slide-in-left">
+<img src="/Users/aryamansinghchouhan/Downloads/profile.png" alt="profile" class="w-full h-full object-contain floating">
+</div>
+<!-- Text -->
+<div class="text-center lg:text-left">
+<h1 class="text-5xl md:text-7xl font-bold mb-4 slide-in-right">
+<span class="gradient-text">Aryaman</span>
+<span class="gradient-text">Singh</span>
+<span class="block lg:inline gradient-text">chouhan</span>
+</h1>
+</div>
+</div>
+<!-- Description -->
+<div class="max-w-3xl mx-auto mt-16 text-center lg:text-left slide-in-up">
+<p class="text-white text-lg md:text-xl leading-relaxed">
+<span class="gradient-text font-medium">Hi, I'm Aryaman Singh Chouhan.</span> <br>I'm currently pursuing a B.Tech in Computer Science and Information Technology at 𝐒𝐲𝐦𝐛𝐢𝐨𝐬𝐢𝐬 𝐔𝐧𝐢𝐯𝐞𝐯𝐢𝐭𝐲 𝐎𝐟 𝐀𝐩𝐩𝐥𝐢𝐞𝐝 𝐒𝐜𝐢𝐞𝐧𝐜𝐞𝐬. I'm passionate about building impactful digital solutions and continuously expanding my skills in programming and technology.
+</p>
+<div class="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+    <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap hero-button">Hire Me</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="py-24 bg-black text-white relative">
+<div id="particles-js-4" class="absolute inset-0 z-0"></div>
+<div class="relative z-10">
+<div class="container mx-auto px-6"> 
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Education</h2>
+<p class="text-gray-300 max-w-2xl mx-auto"></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Schooling -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 duration-300 group">
+<div class="h-0 bg-gray-800 relative">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">SCHOOLING :</h3>
+<p class="text-gray-300 mb-4">Higher Secondary (Class 12th) <br ><br>I've completed my schooling from <br> St. Mary Champion H.S. School <br><br>Board: [CBSE] <br><br>Year of Completion: [2023]</p>
+<div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+</a>
+</div>
+</div>
+</div>
+<!-- Bachelors -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 duration-300 group">
+<div class="h-0 bg-gray-800 relative">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">BACHELORS :</h3>
+<p class="text-gray-300 mb-4">Bachelor of Technology (B.Tech) in [Computer Science and Information Technology]<br><br>Symbiosis University of Applied Sciences (SUAS), Indore<br><br>Expected Graduation: 2028<br><be>Current Year: 2nd Year (2025)</be></p>
+<div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-24 bg-black relative">
+<div id="particles-js-1" class="absolute inset-0 z-0"></div>
+<div class="relative z-10">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Skills</h2>
+<p class="text-gray-300 max-w-2xl mx-auto">these are my Hard Skills</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Skill 1 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-code-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">Programming</h3>
+<p class="text-gray-300">programming Languages : C, C++, JAVA, JACASCRIPT.</p>
+</div>
+<!-- Skill 2 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-team-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">Web Development</h3>
+<p class="text-gray-300">HTML, CSS, JavaScript.</p>
+</div>
+<!-- Skill 3 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-lightbulb-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">DATABASE</h3>
+<p class="text-gray-300">SQL</p>
+</div>
+<!-- Skill 4 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-user-voice-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">Tools</h3>
+<p class="text-gray-300">Tools: Microsoft Excel (Basics).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div>
+<a href="#" class="flex items-center gap-2 mb-6">
+<div class="w-10 h-10 flex items-center justify-center">
+<img src="/Users/aryamansinghchouhan/Downloads/profile.png" alt="Profile" class="w-full h-full object-contain">
+</div>
+<span class="gradient-text text-2xl font-semibold">Aryaman Singh Chouhan</span>
+</a>
+<p class="text-gray-400 mb-6">Aspiring front-end devloper <br> web-devlopment enthusiast</p>
+<div class="flex gap-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Events</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contribution</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Contact details</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<a href="singharyaman180@gmail.com" class="text-gray-400 hover:text-primary transition-colors">singharyaman180@gmail.com</a>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<a href="tel:+919993994233" class="text-gray-400 hover:text-primary transition-colors">+91 9993994233</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">Portfolio Website </p>
+</div>
+</div>
+</footer>
+<script>
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('fade-in');
+}
+});
+}, {
+threshold: 0.1
+});
+
+// Observe all elements with animation classes
+document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up, .fade-in').forEach(el => {
+observer.observe(el);
+});
+
+// Animation observer for slide-in animations
+const slideObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const animElements = entry.target.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up');
+animElements.forEach(el => {
+// Add a small delay between each element
+setTimeout(() => {
+el.style.animationPlayState = 'running';
+}, 100);
+});
+}
+});
+}, {
+threshold: 0.1
+});
+
+// Observe sections for slide animations
+document.querySelectorAll('section').forEach(section => {
+slideObserver.observe(section);
+});
+
+// Mobile menu toggle
+const menuButton = document.querySelector('.ri-menu-line');
+if (menuButton) {
+menuButton.addEventListener('click', () => {
+// Create a mobile menu instead of alert
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center';
+const closeBtn = document.createElement('button');
+closeBtn.className = 'absolute top-6 right-6 text-white text-2xl';
+closeBtn.innerHTML = '<i class="ri-close-line"></i>';
+closeBtn.onclick = () => mobileMenu.remove();
+const menuItems = document.createElement('div');
+menuItems.className = 'flex flex-col items-center gap-8 text-xl';
+menuItems.innerHTML = `
+<a href="#" class="gradient-text hover:opacity-80 transition-opacity py-2">Home</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] hover:bg-clip-text transition-colors py-2">About Us</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] hover:bg-clip-text transition-colors py-2">Events</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] hover:bg-clip-text transition-colors py-2">Contribution</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] hover:bg-clip-text transition-colors py-2">Contact</a>
+`;
+mobileMenu.appendChild(closeBtn);
+mobileMenu.appendChild(menuItems);
+document.body.appendChild(mobileMenu);
+document.body.style.overflow = 'hidden';
+closeBtn.addEventListener('click', () => {
+document.body.style.overflow = '';
+});
+});
+}
+
+// Initialize particles.js
+document.addEventListener('DOMContentLoaded', function() {
+// Particles config
+const particlesConfig = {
+"particles": {
+"number": {
+"value": 100,
+"density": {
+"enable": true,
+"value_area": 800
+}
+},
+"color": {
+"value": ["#37f42d", "#8effbf", "#37f42d"]
+},
+"shape": {
+"type": "circle",
+"stroke": {
+"width": 0,
+"color": "#000000"
+},
+"polygon": {
+"nb_sides": 5
+}
+},
+"opacity": {
+"value": 0.5,
+"random": true,
+"anim": {
+"enable": true,
+"speed": 1,
+"opacity_min": 0.2,
+"sync": false
+}
+},
+"size": {
+"value": 5,
+"random": true,
+"anim": {
+"enable": true,
+"speed": 2,
+"size_min": 0.1,
+"sync": false
+}
+},
+"line_linked": {
+"enable": true,
+"distance": 150,
+"color": "#8effbf",
+"opacity": 0.4,
+"width": 1.5
+},
+"move": {
+"enable": true,
+"speed": 1.5,
+"direction": "none",
+"random": true,
+"straight": false,
+"out_mode": "out",
+"bounce": false,
+"attract": {
+"enable": false,
+"rotateX": 600,
+"rotateY": 1200
+}
+}
+},
+"interactivity": {
+"detect_on": "canvas",
+"events": {
+"onhover": {
+"enable": true,
+"mode": "grab"
+},
+"onclick": {
+"enable": true,
+"mode": "push"
+},
+"resize": true
+},
+"modes": {
+"grab": {
+"distance": 140,
+"line_linked": {
+"opacity": 0.5
+}
+},
+"bubble": {
+"distance": 400,
+"size": 40,
+"duration": 2,
+"opacity": 8,
+"speed": 3
+},
+"repulse": {
+"distance": 200,
+"duration": 0.4
+},
+"push": {
+"particles_nb": 4
+},
+"remove": {
+"particles_nb": 2
+}
+}
+},
+"retina_detect": true
+};
+
+// Initialize particles for each section
+if (document.getElementById('particles-js-1')) {
+particlesJS('particles-js-1', particlesConfig);
+}
+if (document.getElementById('particles-js-2')) {
+particlesJS('particles-js-2', particlesConfig);
+}
+if (document.getElementById('particles-js-4')) {
+particlesJS('particles-js-4', particlesConfig);
+}
+});
+</script>
+</body>
+</html>
