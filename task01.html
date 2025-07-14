@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OASISINFOBYTE - Learn. Code. Lead.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:"#63cdf1e8",secondary:'#5a189a'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+.gradient-text {
+background: linear-gradient(90deg,#29c9ff 0%, #ffffff 100%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+overflow-x: hidden;
+background-color: black;
+color: white;
+}
+.hero-bg {
+background-image: url('https://www.shutterstock.com/shutterstock/videos/3556431041/thumb/1.jpg?ip=x480');
+background-size: cover;
+background-position: center;
+}
+.hero-overlay {
+backdrop-filter: blur(4px);
+background-color: rgba(0, 0, 0, 0.6);
+}
+.floating {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0% { transform: translateY(0px) rotate(0deg); }
+25% { transform: translateY(-15px) rotate(2deg); }
+50% { transform: translateY(-20px) rotate(0deg); }
+75% { transform: translateY(-15px) rotate(-2deg); }
+100% { transform: translateY(0px) rotate(0deg); }
+}
+.floating {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0% { transform: translateY(0px) rotate(0deg); }
+25% { transform: translateY(-15px) rotate(2deg); }
+50% { transform: translateY(-20px) rotate(0deg); }
+75% { transform: translateY(-15px) rotate(-2deg); }
+100% { transform: translateY(0px) rotate(0deg); }
+}
+.fade-in {
+opacity: 0;
+animation: fadeIn 2s forwards;
+}
+.fade-in-delay-1 {
+opacity: 0;
+animation: fadeIn 2s forwards 0.5s;
+}
+.fade-in-delay-2 {
+opacity: 0;
+animation: fadeIn 2s forwards 1s;
+}
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background: linear-gradient(90deg, #29c9ff 0%, #ffffff 100%);
+transition: width 0.3s;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.nav-link:hover {
+background: linear-gradient(90deg, #29c9ff, #ffffff 100%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+.gradient-header {
+background: linear-gradient(90deg, #29c9ff 0%, #ffffff 100%);
+}
+.slide-in-left {
+animation: slideInLeft 1.5s ease forwards;
+opacity: 0;
+transform: translateX(-50px);
+}
+.slide-in-right {
+animation: slideInRight 1.5s ease forwards;
+opacity: 0;
+transform: translateX(50px);
+}
+.slide-in-up {
+animation: slideInUp 1.5s ease forwards;
+opacity: 0;
+transform: translateY(50px);
+}
+@keyframes slideInLeft {
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes slideInRight {
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes slideInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.hero-button {
+transition: all 0.3s ease;
+transform: translateY(0);
+}
+.hero-button:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(63, 149, 224, 0.3);
+}
+</style>
+</head>
+<body class="bg-black min-h-screen">
+<!-- Header -->
+<header class="fixed w-full bg-black bg-opacity-70 backdrop-blur-sm z-50">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="#" class="flex items-center gap-2">
+<div class="w-10 h-10 flex items-center justify-center">
+<img src="https://i.ibb.co/5wFJgDL/okay.png" alt="0asisinfobyte Logo" class="w-full h-full object-contain">
+</div>
+<span class="gradient-text text-2xl font-semibold">OASISINFOBYTE</span>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a href="HomePage.html" class="nav-link text-white hover:text-primary transition-colors">Home</a>
+<a href="TeamPage.html" class="nav-link text-white hover:text-primary transition-colors">Team</a>
+<a href="EventsPage.html" class="nav-link text-white hover:text-primary transition-colors">Internships</a>
+<a href="ContactUsPage.html" class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+</nav>
+<div class="md:hidden w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line text-white text-2xl"></i>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg min-h-screen flex items-center justify-center relative">
+<div class="hero-overlay absolute inset-0 z-0"></div>
+<div class="container mx-auto px-6 py-24 relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+<!-- Logo -->
+<div class="w-72 h-72 flex items-center justify-center slide-in-left">
+<img src="https://i.ibb.co/5wFJgDL/okay.png" alt="Oasisinfobyte Logo">
+</div>
+<!-- Text -->
+<div class="text-center lg:text-left">
+<h1 class="text-5xl md:text-7xl font-bold mb-4 slide-in-right">
+<span class="gradient-text">Learn.</span>
+<span class="text-white">Code.</span>
+<span class="block lg:inline gradient-text">Lead.</span>
+</h1>
+</div>
+</div>
+<!-- Description -->
+<div class="max-w-3xl mx-auto mt-16 text-center lg:text-left slide-in-up">
+<p class="text-white text-lg md:text-xl leading-relaxed">
+<span class="gradient-text font-medium">Learn. Code. Lead.</span> At <span class="gradient-text font-medium">OASISINFOBYTE</span> We Develop Personalized Software At Our Company, We Turn The Digital Dreams Of Our Clients Into A Reality. We Work Closely With Our Users Throughout Development To Ensure That We Are Still Aligned With The End-Goal. We Are Committed To Producing Exceptional Software For Each Of Our Clients.
+
+</p>
+<div class="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+<button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap hero-button">Explore Events</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Leads Section -->
+<section class="py-24 bg-black text-white relative">
+<div id="particles-js-4" class="absolute inset-0 z-0"></div>
+<div class="relative z-10">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Team </h2>
+<p class="text-gray-300 max-w-2xl mx-auto"></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Team Member 1 -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 duration-300 group">
+<div class="h-64 bg-gray-800 relative">
+<img src="https://public.readdy.ai/ai/img_res/231bcfba02dede104edc3878efefe75f.jpg" alt="Atharva Gaur" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">Adarsh Prakash</h3>
+<p class="text-gray-300 mb-4">Web Development And Design</p>
+<div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-linkedin-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-github-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-mail-fill text-white text-sm"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 duration-300 group">
+<div class="h-64 bg-gray-800 relative">
+<img src="https://public.readdy.ai/ai/img_res/b2256d4a3359fb9b78ec683d05e75af0.jpg" alt="Jay Jain" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">Lakshya Dutta</h3>
+<p class="text-gray-300 mb-4">Animation Designer</p>
+<div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-linkedin-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-github-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-mail-fill text-white text-sm"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 duration-300 group">
+<div class="h-64 bg-gray-800 relative">
+<img src="https://public.readdy.ai/ai/img_res/8a8cd12162b48216f32183cbb9b7a454.jpg" alt="Aryaman Singh Chouhan" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">Nancy Dhir</h3>
+<p class="text-gray-300 mb-4">Human Resource</p>
+<div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-linkedin-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-github-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-gradient-to-r hover:from-[#6366F1] hover:to-[#EC4899] rounded-full transition-all transform hover:scale-110">
+<i class="ri-mail-fill text-white text-sm"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-24 bg-black relative">
+<div id="particles-js-1" class="absolute inset-0 z-0"></div>
+<div class="relative z-10">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">What We Offer</h2>
+<p class="text-gray-300 max-w-2xl mx-auto">We Develop Personalized Software At Our Company, We Turn The Digital Dreams Of Our Clients Into A Reality. We Work Closely With Our Users Throughout Development To Ensure That We Are Still Aligned With The End-Goal.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-code-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">Internship</h3>
+<p class="text-gray-300">Hands-on sessions led by industry experts to help you master programming languages and frameworks.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-team-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">Placement Support</h3>
+<p class="text-gray-300">Collaborate with peers on real-world projects that solve problems and create impact.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-lightbulb-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">Resume building</h3>
+<p class="text-gray-300">Participate in hackathons and innovation competitions to test your skills and creativity.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-user-voice-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 gradient-text">Networking Events</h3>
+<p class="text-gray-300">Connect with industry professionals, alumni, and fellow members at our regular networking events.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events Section -->
+<section class="py-24 bg-black relative">
+<div id="particles-js-2" class="absolute inset-0 z-0"></div>
+<div class="relative z-10">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our internships</h2>
+<p class="text-gray-300 max-w-2xl mx-auto">Stay updated with our latest internship opportunities.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event 1 -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="h-48 bg-gray-200 relative">
+<img src="https://public.readdy.ai/ai/img_res/e28497325917cd864a741a2db6dfa537.jpg" alt="web-devlopment" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">Web devlopment</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">Web Development Internships</h3>
+<p class="text-gray-300 mb-4">The Web Development Internship Offers Practical Work Experience And An Introduction To Creating And Improving Web-Based Systems.</p>
+<button class="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
+Register Now
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="h-48 bg-gray-200 relative">
+<img src="https://public.readdy.ai/ai/img_res/b18c4d0ea7b2445d531869bbabefcb9c.jpg" alt="Graphic Design" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">Graphic Design</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">Graphic Design Internship</h3>
+<p class="text-gray-300 mb-4">With A Graphic Design Internship, You Will Be Involved In Projects That Focus On Nearly Every Aspect Of A Business’s Visual Design Strategies.</p>
+<button class="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
+Register Now
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
+<div class="h-48 bg-gray-200 relative">
+<img src="https://public.readdy.ai/ai/img_res/07d36d1e7d9469b7a51905ef7cbce61a.jpg" alt="Networking Event" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Android Development</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 gradient-text">Android Development Internship</h3>
+<p class="text-gray-300 mb-4">Android Is An Open Source Operating For Mobile Application Development.Now A Days People Continuously Shifting To Mobile Devices To Access Internet Application And Other Important Tasks.which Is More Easy Than To Work On PC.</p>
+<button class="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
+Register Now
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-button font-medium whitespace-nowrap">View All Internships</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div>
+<a href="#" class="flex items-center gap-2 mb-6">
+<div class="w-10 h-10 flex items-center justify-center">
+<img src="https://i.ibb.co/5wFJgDL/okay.png" alt="OASISINFIBYTE Logo" class="w-full h-full object-contain">
+</div>
+<span class="gradient-text text-2xl font-semibold">OASISINFOBYTE</span>
+</a>
+<p class="text-gray-400 mb-6">We Develop Personalized Software At Our Company, We Turn The Digital Dreams Of Our Clients Into A Reality.</p>
+<div class="flex gap-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Events</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contribution</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Resources</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Tutorials</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Projects</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Documentation</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<div class="w-5 h-5 flex items-center justify-center mt-1">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<span class="text-gray-400">Satya Niketan, South West New Delhi, India - 110021</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<a href="mailto:Contact@Oasisinfobyte.in" class="text-gray-400 hover:text-primary transition-colors">Contact@Oasisinfobyte.in</a>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<a href="tel:+1234567890" class="text-gray-400 hover:text-primary transition-colors">+1 (234) 567-890</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">&copy; copyright OASIS INFOBYTE. All Rights Reserved Designed By Team OASIS</p>
+</div>
+</div>
+</footer>
+<script>
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('fade-in');
+}
+});
+}, {
+threshold: 0.1
+});
+
+// Observe all elements with animation classes
+document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up, .fade-in').forEach(el => {
+observer.observe(el);
+});
+
+// Animation observer for slide-in animations
+const slideObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const animElements = entry.target.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up');
+animElements.forEach(el => {
+// Add a small delay between each element
+setTimeout(() => {
+el.style.animationPlayState = 'running';
+}, 100);
+});
+}
+});
+}, {
+threshold: 0.1
+});
+
+// Observe sections for slide animations
+document.querySelectorAll('section').forEach(section => {
+slideObserver.observe(section);
+});
+
+// Mobile menu toggle
+const menuButton = document.querySelector('.ri-menu-line');
+if (menuButton) {
+menuButton.addEventListener('click', () => {
+// Create a mobile menu instead of alert
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center';
+const closeBtn = document.createElement('button');
+closeBtn.className = 'absolute top-6 right-6 text-white text-2xl';
+closeBtn.innerHTML = '<i class="ri-close-line"></i>';
+closeBtn.onclick = () => mobileMenu.remove();
+const menuItems = document.createElement('div');
+menuItems.className = 'flex flex-col items-center gap-8 text-xl';
+menuItems.innerHTML = `
+<a href="#" class="gradient-text hover:opacity-80 transition-opacity py-2">Home</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#ffffff] hover:to-[#ffffff] hover:bg-clip-text transition-colors py-2">About Us</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#ffffff] hover:to-[#ffffff] hover:bg-clip-text transition-colors py-2">Events</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#ffffff] hover:to-[#fffff] hover:bg-clip-text transition-colors py-2">Contribution</a>
+<a href="#" class="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-[#ffffff] hover:to-[#ffffff] hover:bg-clip-text transition-colors py-2">Contact</a>
+`;
+mobileMenu.appendChild(closeBtn);
+mobileMenu.appendChild(menuItems);
+document.body.appendChild(mobileMenu);
+document.body.style.overflow = 'hidden';
+closeBtn.addEventListener('click', () => {
+document.body.style.overflow = '';
+});
+});
+}
+
+// Initialize particles.js
+document.addEventListener('DOMContentLoaded', function() {
+// Particles config
+const particlesConfig = {
+"particles": {
+"number": {
+"value": 10,
+"density": {
+"enable": true,
+"value_area": 100
+}
+},
+"color": {
+"value": ["#29c9ff", "#ffffff", "#29c9ff"]
+},
+"shape": {
+"type": "circle",
+"stroke": {
+"width": 0,
+"color": "#000000"
+},
+"polygon": {
+"nb_sides": 5
+}
+},
+"opacity": {
+"value": 0.5,
+"random": true,
+"anim": {
+"enable": true,
+"speed": 1,
+"opacity_min": 0.2,
+"sync": false
+}
+},
+"size": {
+"value": 5,
+"random": true,
+"anim": {
+"enable": true,
+"speed": 2,
+"size_min": 0.1,
+"sync": false
+}
+},
+"line_linked": {
+"enable": true,
+"distance": 150,
+"color": "#ffffff",
+"opacity": 0.4,
+"width": 1.5
+},
+"move": {
+"enable": true,
+"speed": 1.5,
+"direction": "none",
+"random": true,
+"straight": false,
+"out_mode": "out",
+"bounce": false,
+"attract": {
+"enable": false,
+"rotateX": 600,
+"rotateY": 1200
+}
+}
+},
+"interactivity": {
+"detect_on": "canvas",
+"events": {
+"onhover": {
+"enable": true,
+"mode": "grab"
+},
+"onclick": {
+"enable": true,
+"mode": "push"
+},
+"resize": true
+},
+"modes": {
+"grab": {
+"distance": 200,
+"line_linked": {
+"opacity": 0.5
+}
+},
+"bubble": {
+"distance": 100,
+"size": 40,
+"duration": 2,
+"opacity": 8,
+"speed": 3
+},
+"repulse": {
+"distance": 200,
+"duration": 0.4
+},
+"push": {
+"particles_nb": 4
+},
+"remove": {
+"particles_nb": 2
+}
+}
+},
+"retina_detect": true
+};
+
+// Initialize particles for each section
+if (document.getElementById('particles-js-1')) {
+particlesJS('particles-js-1', particlesConfig);
+}
+if (document.getElementById('particles-js-2')) {
+particlesJS('particles-js-2', particlesConfig);
+}
+if (document.getElementById('particles-js-4')) {
+particlesJS('particles-js-4', particlesConfig);
+}
+});
+</script>
+</body>
+</html>
